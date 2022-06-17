@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oracle Challenge 2</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+  <body>
+    <header>
+      <img id="icon" src="img/icon.png" allow="geolocation" alt="logo">
+    </header>
+
+    <main class="startpage">
+      <h1>Oracle ONE - Jogo da Forca</h1>
+      <button class="BUTTON_PLAY" onclick="screenGame()">Começar a jogar</button>
+      <button class="BUTTON_ADDWORD" onclick="addword()">Adicionar nova palavra</button>
+    </main>
+    <div class="games">
+      <div class="imgforca">
+        <img src="img/base.png" alt="" class="base"/>
+        <img src="img/astemaior.png" alt="" class="astemaior"/>
+        <img src="img/astemenor.png" alt="" class="astemenor"/>
+        <img src="img/corda.png" alt=""class="corda"/>
+        <img src="img/cabeca.png" alt="" class="cabeca"/>
+        <img src="img/tronco.png" alt=""class="tronco"/>
+        <img src="img/bracodireito.png" alt="" class="bracodireito"/>
+        <img src="img/bracoesquerdo.png" alt="" class="bracoesquerdo"/>
+        <img src="img/pernadireita.png" alt="" class="pernadireita"/>
+        <img src="img/pernaesquerda.png" alt="" class="pernaesquerda"/>
+      </div>
+      <textarea id="inputCHAR"  type="text"43 onchange="" readonly placeholder="Adivinhe uma letra">
+      </textarea>
+      <div class="word" id="word">
+        <div class="word-content" id="addword">
+          <p id="letter"></p>
+        </div>
+        <div class="word-contentOFF" id="addword">
+          <p id="letterOFF"></p>
+        </div>
+      </div>
+        <button class="BUTTON_NEWPLAY" onclick="window.location.reload()">Novo Jogo</button>
+        <button class="BUTTON_CANCEL" onclick="window.location.reload()">Desistir</button>
+        <div class="dica">
+          <textarea id="dicain" name="" style="resize:none" readonly>Dica</textarea>
+      </div>
+    </div>
+    
+    <p class="copyrightGame">&copy; Copyright - Leandro da Silva Santos</p>
+
+    <footer class="footer">
+      <a href="https://www.linkedin.com/in/le-andro/" target="_blank"><img src="img/linkedin.png" alt=""></a>
+      <a href="https://github.com/leandrodasilvasantos" target="_blank"><img src="img/git.png" alt=""></a>
+      <p class="copyright">&copy; Copyright - Leandro da Silva Santos</p>
+    </footer>
+
+    <div id="modal-id" class="modal-container">
+      <div class="modal">
+        <h2 class="title-modal-win">Parabéns, Você ganhou!</h1>
+        <h2 class="title-modal-lose">Que pena, Você perdeu!</h1>
+          <p class="subtitle-modal">Deseja jogar novamente?</p>
+          <div class="button-modal">
+            <button class="BUTTON_NEWPLAY_MODAL" onclick="window.location.reload()">Jogar</button>
+          <button class="BUTTON_CANCEL_MODAL" onclick="window.location.reload()">Desistir</button>
+          </div>
+      </div>
+    </div>
+
+    <script src="alg.js"></script>
+  </body>
+</html>
